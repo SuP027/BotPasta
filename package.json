@@ -1,0 +1,15 @@
+{
+  "name": "bot-telegram-ofertas",
+  "version": "1.0.0",
+  "description": "Bot do Telegram que divulga ofertas do Mercado Livre em grupo",
+  "main": "bot-telegram-ofertas.js",
+  "scripts": {
+    "start": "node bot-telegram-ofertas.js"
+  },
+  "keywords": ["telegram", "bot", "mercadolivre"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
