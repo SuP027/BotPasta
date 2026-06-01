@@ -87,11 +87,7 @@ async function ciclo() {
 }
 
 (async () => {
-  console.log('Bot com', PRODUTOS.length, 'produtos. Ciclo de', ANUNCIOS_POR_CICLO, 'anúncios a cada', INTERVALO_MS / 1000 / 60, 'min.');
+  console.log('Bot com', PRODUTOS.length, 'produtos. Enviando', ANUNCIOS_POR_CICLO, 'anuncios por ciclo.');
   await ciclo();
-  setInterval(() => {
-    console.log('\nNova rodada...');
-    ciclo();
-  }, INTERVALO_MS);
-  console.log('Rodando... Ctrl+C para parar.');
+  console.log('Ciclo finalizado. Workflow terminara em breve.');
 })();
