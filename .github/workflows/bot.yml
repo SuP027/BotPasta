@@ -2,7 +2,7 @@ name: Bot Telegram Ofertas
 
 on:
   schedule:
-    - cron: '*/10 * * * *'   # a cada 10 minutos
+    - cron: '* * * * *'   # teste: a cada 1 minuto
   workflow_dispatch:          # permite rodar manualmente
 
 jobs:
