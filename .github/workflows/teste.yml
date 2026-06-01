@@ -1,0 +1,12 @@
+name: Teste Agendamento
+
+on:
+  schedule:
+    - cron: '44 22 1 6 *'   # 19:44 horário local (Brasília)
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apenas um echo
+        run: echo "Funcionou às $(date)"
