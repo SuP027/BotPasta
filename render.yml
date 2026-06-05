@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: bot-telegram-ofertas
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
