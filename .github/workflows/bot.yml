@@ -5,8 +5,10 @@ on:
     - cron: '*/10 * * * *'   # a cada 10 minutos
   workflow_dispatch:          # permite rodar manualmente
 
+# Permissões EXPLÍCITAS — sem isso o schedule não dispara
 permissions:
   contents: read
+  actions: read
 
 jobs:
   enviar-ofertas:
@@ -15,8 +17,9 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Rodar bot
+      - name: Rodar bot (envio de 3 ofertas)
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
           CHAT_ID: ${{ secrets.CHAT_ID }}
+          ANUNCIOS_POR_CICLO: ${{ vars.ANUNCIOS_POR_CICLO || secrets.ANUNCIOS_POR_CICLO || '3' }}
         run: node bot-telegram-ofertas.js
